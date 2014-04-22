@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     // With scalability in mind, we don't want our algorithm to be fixed
     int size = 100, difference = 0;
     // By using this two useful functions we don't have much to do
-    difference = squareOfSum(100) - sumOfSquare(100);
+    difference = squareOfSum(size) - sumOfSquare(size);
     printf("Algorithm end.\n");
 }
 
