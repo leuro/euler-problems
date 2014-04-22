@@ -15,7 +15,7 @@
  * This is not the final version of the algorithm, you can improve it whenever you want by submitting
  * a pull request or an issue on Github.
  *
- * @author Claudio Ludovico Panetta
+ * @author Claudio Ludovico Panetta (@Ludo237)
  * @version 1.0.0
  ***********************************/
 
