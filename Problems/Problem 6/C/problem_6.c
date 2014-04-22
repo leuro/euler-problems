@@ -18,7 +18,7 @@
  * This is not the final version of the algorithm, it's improvable and it always will be. If you have any suggestion or a better
  * algorithm please submit a pull request or open an issue on Github.
  *
- * @author Claudio Ludovico Panetta
+ * @author Claudio Ludovico Panetta (@Ludo237)
  * @version 1.0.0
  **/
 
