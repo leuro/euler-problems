@@ -16,7 +16,7 @@
  * If you have a better solution please submit a pull request or an issue on Github.
  *
  * @author Claudio Ludovico Panetta (@Ludo237)
- * @version 1.0.0
+ * @version 1.5.0
  **/
 #define LIMIT 10001 // Algorithm limit, change it for testing
 
@@ -32,25 +32,6 @@ int main(int argc, char* argv[])
     printf("Algorithm is online, Please wait....\n");
     
     clockStart = clock(); // Starting the benchmark
-
-    // Iterating trough numbers
-    /*
-     * ye olde algorithm
-     * @deprecated
-    for(unsigned int i = 2; i <= LIMIT;)
-    {
-        for(j = 2; j <= pivot -1; j++)
-        {
-            if(pivot % j == 0)
-                break;
-        }
-        if(j == pivot)
-        {
-            // We found a prime
-            i++;
-        }
-        pivot++;
-    }*/
 
     while( j < LIMIT)
     {
