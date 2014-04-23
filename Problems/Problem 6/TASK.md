@@ -3,7 +3,7 @@ Problem 6
 
 ## TASK ##
 
-Problem 5 official page on [Project Euler](http://www.projecteuler.net/problem=6).
+Problem 6 official page on [Project Euler](http://www.projecteuler.net/problem=6).
 
 	The sum of the squares of the first ten natural numbers is,
 	
