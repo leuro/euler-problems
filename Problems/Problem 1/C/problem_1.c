@@ -22,7 +22,7 @@
 
 int array_sum(int array[]);
 
-int main(int argc, char** argv)
+int main(int argc, char* argv[])
 {
     // I don't think this is the best way to work but...
     int size = 1000;
