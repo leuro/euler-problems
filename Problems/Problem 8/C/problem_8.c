@@ -56,14 +56,12 @@ int main(int argc, char* argv[])
         {
             // ...create the product of five consecutive digits
             products[i] = (digits[i] * digits[i-1] * digits[i-2] * digits[i-3] * digits[i-4] * digits[i-5]);
-            printf("Added Product of %d on iteration number %d\n", products[i], i); // Debug purpose
             if(products[i] > maxProduct) // Check if the actual product is the max product...
                 maxProduct = products[i]; //...if so update maxProduct
         }
     }
     // Algorithm end
     end = clock();
-    printf("Max product: %d\n", maxProduct); // Debug purpose
     printf("Time: %f\n", (end - start)/CLOCKS_PER_SEC);
     return 0;
 }
