@@ -40,7 +40,7 @@ int sumOfSquare(int size);
  **/
 int squareOfSum(int size);
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     printf("Algorithm start, please wait...\n");
     // With scalability in mind, we don't want our algorithm to be fixed
