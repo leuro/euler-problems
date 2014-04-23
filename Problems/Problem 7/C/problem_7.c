@@ -1,4 +1,3 @@
-#include <math.h>
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,3 +17,37 @@
  * @author Claudio Ludovico Panetta (@Ludo237)
  * @version 1.0.0
  **/
+
+int main(int argc, char** argv)
+{
+    double clockStart, clockEnd; // First time that I'm using this to bench the algorithm
+
+    unsigned int primenumber = 10001; // Position of our prime number
+    unsigned int pivot = 3; // Where we start to test our prime numbers
+    unsigned int j = 2; // Internal counter, we need to declare here
+
+    printf("Algorithm is online, Please wait....\n");
+    
+    clockStart = clock(); // Starting the benchmark
+
+    // Iterating trough numbers
+    for(unsigned int i = 2; i <= primenumber;)
+    {
+        for(j = 2; j <= pivot -1; j++)
+        {
+            if(pivot % j == 0)
+                break;
+        }
+        if(j == pivot)
+        {
+            // We found a prime
+            i++;
+        }
+        pivot++;
+    }
+
+    clockEnd = clock(); // Finishing the benchmark
+    printf("Algorithm end.\n");
+    printf("Time: %f", (clockEnd - clockStart)/CLOCKS_PER_SEC);
+    return 0;
+}
