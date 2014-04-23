@@ -28,7 +28,7 @@
  */
 int reverse(int number);
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     printf("Algorithm start, please wait...\n");
     // We need to store the palindrome, the size of our test and a temporary variable
