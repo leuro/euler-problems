@@ -59,7 +59,7 @@ void insertArray(Array *a, int element);
 void freeArray(Array *a);
 
 // Algorithm start
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     long int startPoint = 600851475143; // Starting point from project euler, you can change it
     Array primeFactors; // Our beautiful new Array for prime factors
