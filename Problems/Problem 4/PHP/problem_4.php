@@ -15,30 +15,20 @@
  * this is the best algorithm in terms of speed and code optimization, for any trouble open an issue.
  *
  * @author Pietro Arturo PAnetta (@arturu)
+ * @author Santo Antonio Terranova (@tng46)
  * @version 1.0
  */
 
 // Starting the benchmark
 $startTime = microtime();
 
-function isPalindrome($number){
+// thanks to Santo Antonio Terranova @tng46
+function isPalindrome($num){
 
-	$numberToArray = array_map('intval', str_split($number));
+	if ( strcmp($num, strrev($num)) == 0 )  
+            return true;                        //..is palindrome!
 
-	$next = 0;
-	$back = $cycle = count($numberToArray);
-
-	--$back;
-
-	for ( $next; $next<$cycle; $next++ ) {
-		
-		if ( $numberToArray[$next] != $numberToArray[$back] )
-			return false;
-
-		--$back;
-	}
-
-	return true;
+        return false;
 }
 
 function cycleManager($coppia,$command){
@@ -59,7 +49,7 @@ function cycleManager($coppia,$command){
 
 function maxPalindrome($coppia){
 
-	$buffer = array();
+	$maxPalindrome = 0;
 
 	$coppia['cycle']=true;
 
@@ -68,7 +58,7 @@ function maxPalindrome($coppia){
 		$number = $coppia['a'] * $coppia['b'];
 
 		if ( isPalindrome( $number ) ) {
-			$buffer[] = $number;
+			$maxPalindrome = ( $number > $maxPalindrome ) ? $number : $maxPalindrome;
 			$coppia = cycleManager($coppia,'break');
 		}
 
@@ -78,7 +68,7 @@ function maxPalindrome($coppia){
 	} while ($coppia['cycle']);
 	
 
-	return max($buffer);
+	return $maxPalindrome;
 }
 
 
