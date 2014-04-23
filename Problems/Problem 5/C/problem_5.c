@@ -29,7 +29,7 @@
 bool checkDivisible(int number);
 
 // Algorithm starts
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     // We don't have a fixed lenght of operation
     // so ther's a infinite loop
