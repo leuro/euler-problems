@@ -24,7 +24,7 @@
 
 int array_sum(int array[]);
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     // Basically we shouldn't have a "Fixed" lenght for our algorithm
     int size = 32; // Fibonacci's numbers
