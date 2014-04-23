@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 /**
  * Problem 7 from Project Euler
  *
@@ -17,12 +18,14 @@
  * @author Claudio Ludovico Panetta (@Ludo237)
  * @version 1.0.0
  **/
+#define LIMIT 10001 // Algorithm limit, change it for testing
 
-int main(int argc, char** argv)
+bool isPrime(unsigned int number);
+
+int main(int argc, char* argv[])
 {
     double clockStart, clockEnd; // First time that I'm using this to bench the algorithm
 
-    unsigned int primenumber = 10001; // Position of our prime number
     unsigned int pivot = 3; // Where we start to test our prime numbers
     unsigned int j = 2; // Internal counter, we need to declare here
 
@@ -31,7 +34,10 @@ int main(int argc, char** argv)
     clockStart = clock(); // Starting the benchmark
 
     // Iterating trough numbers
-    for(unsigned int i = 2; i <= primenumber;)
+    /*
+     * ye olde algorithm
+     * @deprecated
+    for(unsigned int i = 2; i <= LIMIT;)
     {
         for(j = 2; j <= pivot -1; j++)
         {
@@ -44,10 +50,30 @@ int main(int argc, char** argv)
             i++;
         }
         pivot++;
+    }*/
+
+    while( j < LIMIT)
+    {
+        pivot += 2;
+        if( isPrime(pivot) )
+            j++;
     }
 
     clockEnd = clock(); // Finishing the benchmark
     printf("Algorithm end.\n");
     printf("Time: %f", (clockEnd - clockStart)/CLOCKS_PER_SEC);
     return 0;
+}
+
+bool isPrime(unsigned int number)
+{
+    if( number <= 1) 
+        return false;
+
+    for(unsigned int i = 2; i*i <= number; i++)
+    {
+        if( number % i == 0)
+            return false;
+    }
+    return true;
 }
