@@ -52,10 +52,10 @@ int main(int argc, char* argv[])
     // Algorithm start
     for(unsigned int i = 0; i <= SIZE; i++)
     {
-        if(i % BREAK == 0 && i != 0) // every five consecutive...
+        if(i >= BREAK) // every five consecutive...
         {
             // ...create the product of five consecutive digits
-            products[i] = (digits[i] * digits[i-1] * digits[i-2] * digits[i-3] * digits[i-4] * digits[i-5]);
+            products[i] = (digits[i] * digits[i-1] * digits[i-2] * digits[i-3] * digits[i-4]);
             if(products[i] > maxProduct) // Check if the actual product is the max product...
                 maxProduct = products[i]; //...if so update maxProduct
         }
