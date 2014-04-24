@@ -35,7 +35,7 @@
  * If you have a better solution please submit a pull request or an issue on Github.
  *
  * @author Claudio Ludovico Panetta (@Ludo237)
- * @version 1.0.0
+ * @version 1.0.1
  **/
 
 #define SIZE 1000 // Our algorithm lenght
