@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
             // Check if the power of a and b is equal to the power of c
             if( ( pow(a,2) + pow(b,2) == pow(c,2) ) )
             {
-                printf("Triplet found\n");
+                // Triplet found :)
                 break;
             }
         }
