@@ -38,8 +38,8 @@
  * @version 1.0.1
  **/
 
-#define SIZE 1000 // Our algorithm lenght
-#define BREAK 5 // every time we have to multiply
+#define SIZE 1000 // Our algorithm lenght, change it.
+#define BREAK 5 // every time we have to multiply, change it
 
 int main(int argc, char* argv[])
 {
