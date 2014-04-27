@@ -51,7 +51,10 @@ bool checkDivisible(int number)
 {
     // Check for our range of test numbers
     // if "number" is evenly divisible by all of them
-    for( int i = 2; i <= 20; i++)
+    if(number%2==0){
+        return false;
+    }
+    for( int i = 3; i <= 20; i+=2)
     {
         if( number % i != 0)
             return false; // Nope
