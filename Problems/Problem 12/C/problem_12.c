@@ -32,7 +32,7 @@
  *
  *  @author Claudio Ludovico Panetta (@Ludo237)
  *
- *  @version 1.0.0
+ *  @version 1.1:.0
  **/
 #define ITERATION 500
 
@@ -72,19 +72,23 @@ int main(int argc, char* argv[])
     do
     {
         summatory += i++;
-        if( divisible(summatory) > ITERATION) break;
+        if( divisible(summatory) > ITERATION)
+            break;
     }while(true);
     // Algorithm end
     end = clock();
     printf("Algorithm end, Time: %f\n", (end - start)/CLOCKS_PER_SEC);
+    printf("%d\n", summatory);
     return 0;
 }
 
 bool isPrime(const unsigned int number) // This should reduce the complexity by a factor of O(n^1/2)
 {
-    if( number == 1 || number == 4 || number == 6) return false;
-    if( number == 2 || number == 3 || number == 5) return true;
-    for(unsigned short int i = 2; i <= sqrt(number); i++)
+    if( number == 1 || (number % 2 == 0))
+        return false;
+    if( number == 2)
+        return true;
+    for(unsigned short int i = 3; i <= sqrt(number); i+=2)
     {
         if(number % i == 0) return false;
     }
