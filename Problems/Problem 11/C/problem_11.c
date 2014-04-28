@@ -47,7 +47,7 @@
 #define GRID_SIZE 20
 #define GRID_START_POINT 3
 
-int main(int argv, char** argc)
+int main(int argc,char* argv[])
 {
     // Benchmark variables
     double start, end;
