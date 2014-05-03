@@ -5,7 +5,7 @@ This project is supported & developed by wonderful people, developers who devote
 
 They use their invaluable time to show you how you can write algorithms for simple and complex problems, without having any monetary reward
 
-	The list order is totally random.
+## The list order is totally random ##
 	
 - Matteo Manchi ([@MatteoManchi](https://twitter.com/matteomanchi))
 - Claudio Ludovico Panetta ([@Ludo237](https://twitter.com/Ludo237))
