@@ -13,7 +13,7 @@ This is a simple repository with procedure for some of the mainstream problems t
 
 ## What is Project Euler ? ##
 
-Quote from the site
+Quote from the site:
 	
 	«Project Euler exists to encourage, challenge,
 	and develop the skills and enjoyment of anyone with an interest
@@ -21,7 +21,7 @@ Quote from the site
 	
 I think that Computer Science is strictly related to Mathematics so that's the basic idea: 
 	
-	Solving mathematics problems with programming languages
+	«Solving mathematics problems with programming languages»
 
 It's nothing new I know, but I want to do it in a different way, I will create a folder for every problem set and inside it I will put the procedure in different programming languages, those who I know most of course.
 
@@ -42,7 +42,7 @@ Actually I will solve the problems with:
 Those are the languages that I know at the moment. I don't know if I will add some other languages, it's not so easy.
 
 ## Can I contribute to this? ##
-**OF COURSE YOU CAN**
+**OF COURSE YOU CAN, YOU HAVE TO :smile: **
 
 - If you want to pull a solution with different language, I will not cover EVERY problems with all languages, fell free to submit a pull request.
 - If you think that you have a faster, or better, solution, feel free to open an issue and we will discuss on it :-)
