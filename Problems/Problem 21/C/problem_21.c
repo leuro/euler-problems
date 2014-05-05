@@ -53,7 +53,6 @@ int main(int argc, char* argv[])
     }
     // Finish
     end = clock();
-    printf("Sum: %d\n", summatory);
     printf("Algorithm end.\n");
     printf("Total time: %f\n", (end - start)/CLOCKS_PER_SEC);
     return 0;
