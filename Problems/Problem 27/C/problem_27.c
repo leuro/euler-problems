@@ -1,6 +1,7 @@
 #include <time.h>
 #include <math.h>
 #include <stdio.h>
+#include <limits.h>
 #include <stdlib.h>
 /**
  * Problem 27 from Project Euler
@@ -33,7 +34,7 @@
  * @version 1.0.0
  **/
 #define MAX 1000 // As always
-
+#define REVERSE ((MAX * (-1)) + 1) // -999
 /**
  * is_prime
  * @param signed int number
@@ -41,24 +42,30 @@
  * @description
  *  A new kind of check for prime number, bit faster
  **/
-unsigned int is_prime(signed int number);
+unsigned int is_prime(int number);
 
 int main(int argc, char *argv[])
 {
     // Benchmark variables
     double start, end;
     // Helper variables
-    signed int counter = 0, first_maximum = 0, second_maximum = 0;
+    int counter = 0, first_maximum = 0, second_maximum = 0, number = 0;
+    // This is a freaking awesome alternative method for abs()
+    // Thanks to http://stackoverflow.com/a/9772647/1202367
+    unsigned int const mask = number >> sizeof(int) * (CHAR_BIT - 1);
     // Algorithm starts
     start = clock();
-    printf("Algorithm starts, please wait\n");
+    printf("Algorithm starts, please wait.\n");
     // Iterating our limit
-    for(signed int i = ((MAX * (-1)) + 1); i < MAX; i++)
+    // idk if there's a better solution but I feel comfortable with this
+    // three loopsi
+    for(int i = REVERSE; i < MAX; i++)
     {
-        for(signed int j = ((MAX * (-1)) + 1); j < MAX; j++)
+        for(int j = REVERSE; j < MAX; j++)
         {
-            signed int temp = 0, number = j;
-            for(signed int k = 0; is_prime(abs(number)) == 1; k++)
+            int temp = 0;
+            number = j;
+            for(int k = 0; is_prime((number + mask) ^ mask) == 1; k++)
             {
                 temp++;
                 number = (k * k) + (i * k) + j; // Hello Euler
@@ -74,24 +81,37 @@ int main(int argc, char *argv[])
     }
     // Algorithm end
     end = clock();
-    printf("Total %d\n", (first_maximum * second_maximum));
+    printf("%d\n", (first_maximum * second_maximum));
     printf("Algorithm end.\n");
     printf("Total time: %f\n", (end - start)/CLOCKS_PER_SEC);
     return 0;
 }
 
-unsigned int is_prime(signed int number)
+unsigned int is_prime(int number)
 {
-    if( number % 2 == 0)
+    if(number <= 1)
     {
+        // Zero and One are not prime...
         return 0;
     }
-    for(signed int i = 3; i < ceil((sqrt(number))) + 1; i+=2)
+    if(number == 2)
+    {
+        // Two is prime!
+        return 1; 
+    }
+    if(number % 2 == 0)
+    {
+        // Even numbers are not prime :(
+        return 0;
+    }
+    for(unsigned int i = 3; (i * i) <= number; i+=2)
     {
         if(number % i == 0)
         {
+            // Not prime :-(
             return 0;
         }
     }
+    // Is prime!
     return 1;
 }
