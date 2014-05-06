@@ -81,7 +81,6 @@ int main(int argc, char *argv[])
     }
     // Algorithm end
     end = clock();
-    printf("%d\n", (first_maximum * second_maximum));
     printf("Algorithm end.\n");
     printf("Total time: %f\n", (end - start)/CLOCKS_PER_SEC);
     return 0;
