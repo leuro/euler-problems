@@ -64,13 +64,8 @@ int main(int argc, char *argv[])
 
 unsigned int to_the_power(unsigned int number, unsigned int summatory)
 {
-    if(number != 0)
-    {
-        unsigned int temp = number % 10;
-        to_the_power(number / 10, summatory + ( temp * temp * temp * temp * temp));
-    }
-    else
-    {
+    if(number == 0)
         return summatory;
-    }
+    unsigned int temp = number % 10;
+    return to_the_power(number / 10, summatory + ( temp * temp * temp * temp * temp));
 }
