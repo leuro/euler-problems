@@ -56,7 +56,6 @@ int main(int argc, char *argv[])
         }
     }
     end = clock();
-    printf("%d\n", total);
     printf("Algorithm end.\n");
     printf("Total time: %f\n", (end - start)/CLOCKS_PER_SEC);
     return 0;
