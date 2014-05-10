@@ -1,9 +1,9 @@
 Contributors
 =====
 
-This project is supported & developed by wonderful people, developers who devote their time to this project towards a common goal: training and teaching.
+This project is supported & developed by wonderful people, developers who devote their time to this project towards a common goal: training and teaching Algorithms
 
-They use their invaluable time to show you how you can write algorithms for simple and complex problems, without having any monetary reward
+They use their invaluable time to show you how you can write algorithms for simple and complex problems, without having any monetary reward.
 
 ## The list order is totally random ##
 	
